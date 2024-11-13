@@ -1,0 +1,40 @@
+.EmailSection {
+  background: linear-gradient(to bottom, #f6f6f8 50%, #23233b 50%);
+  padding: 100px 0;
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #57d9a6;
+    color: #1c1c33;
+    padding: 100px 0;
+    @media (min-width: 481px) and (max-width: 768px) {
+      padding: 30px 0;
+    }
+    @media (min-width: 321px) and (max-width: 480px) {
+      padding: 30px 0;
+
+    }
+    h1 {
+      text-align: center;
+    }
+    .email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @media (min-width: 481px) and (max-width: 768px) {
+        flex-direction: column;
+      }
+      @media (min-width: 321px) and (max-width: 480px) {
+        flex-direction: column;
+      }
+      button {
+        background-color: #1c1c33;
+        color: #57d9a6;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+}

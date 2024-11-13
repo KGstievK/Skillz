@@ -1,0 +1,78 @@
+.Header {
+  background-color: #000;
+  .sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #57d9a6;
+    p {
+      font-size: clamp(12px, 2vw, 18px);
+      font-weight: 400;
+      color: #1c1c33;
+    }
+  }
+  .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 35% 2%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      grid-template-columns: 16% 38% 3%;
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: 21% 55% 5%;
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      grid-template-columns: 22% 65% 5%;
+    }
+    @media (min-width: 321px) and (max-width: 480px) {
+      grid-template-columns: 40% 12%;
+    }
+    @media (max-width: 320px) {
+      grid-template-columns: 60% 30%;
+
+    }
+    .Logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        font-size: calmp(14px, 2vw, 18px);
+        font-weight: 400;
+        line-height: 27px;
+      }
+      @media (min-width: 301px) and (max-width: 480px) {
+        display: none;
+      }
+      @media (max-width: 300px) {
+        display: none;
+      }
+    }
+    .cart {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: 301px) and (max-width: 480px) {
+        display: none;
+      }
+      @media (max-width: 300px) {
+        display: none;
+      }
+    }
+    .burgerMenu {
+			display: none;
+      @media (min-width: 301px) and (max-width: 480px) {
+        display: block;
+      }
+		}
+  }
+}

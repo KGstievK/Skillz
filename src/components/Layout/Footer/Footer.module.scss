@@ -1,0 +1,82 @@
+.Footer {
+  .content {
+    width: 100%;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 481px) and (max-width: 768px) {
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: 321px) and (max-width: 480px) {
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+    .resurs {
+      margin-top: 50px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @media (min-width: 481px) and (max-width: 768px) {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (min-width: 321px) and (max-width: 480px) {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        @media (min-width: 481px) and (max-width: 768px) {
+          flex-direction: column;
+          gap: 25px;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (min-width: 321px) and (max-width: 480px) {
+          flex-direction: column;
+          gap: 25px;
+          align-items: center;
+          justify-content: center;
+        }
+        a {
+          text-transform: uppercase;
+          font-size: 16px;
+        }
+        h2 {
+          margin-top: 25px;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+      .icons {
+        .iconLink {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            background-color: #f6f6f8;
+          }
+        }
+      }
+    }
+  }
+}

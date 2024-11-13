@@ -1,0 +1,58 @@
+.ArticleSection {
+  background-color: #F6F6F8;
+  padding: 150px 0;
+  color: #1C1C33;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 50px;
+    p {
+      color: #4E4E65;
+    }
+    .course {
+      max-width: 393px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #000;
+      img {
+        width: 100%;
+        height: 197px;
+        object-fit: cover;
+        @media (min-width: 481px) and (max-width: 768px) {
+          height: 124px;
+        }
+        @media (min-width: 321px) and (max-width: 480px) {
+          height: 124px;
+        }
+      }
+      .info {
+        position: relative;
+        padding: 24px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          line-height: 28.8px;
+          width: calmp(200px, 3vw, 300px);
+          &:nth-last-child(2) {
+            font-size: clamp(18px, 4vw, 24px);
+            color: #1c1c33;
+          }
+          &:nth-last-child(1) {
+            font-size: clamp(14px, 3vw, 17px);
+            color: #4e4e65;
+          }
+        }
+        button {
+          justify-content: flex-start;
+          padding: 0;
+          background-color: transparent;
+          color: #57D9A6;
+        }
+      }
+    }
+  }
+}
