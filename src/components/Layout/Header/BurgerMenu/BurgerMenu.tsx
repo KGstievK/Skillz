@@ -3,7 +3,6 @@ import Cart from "@/assets/Cart.svg";
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import scss from "./BurgerMenu.module.scss";
 
