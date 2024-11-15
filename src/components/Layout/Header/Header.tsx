@@ -22,9 +22,9 @@ const Header = () => {
 
             <Link href="#Workshops">Free Workshops</Link>
 
-            <Link href="#Blog">Blog</Link>
+            <Link href="/">Blog</Link>
 
-            <Link href="#About">About</Link>
+            <Link href="/">About</Link>
 
             <Link href="#Contact">Contact</Link>
           </div>

@@ -67,11 +67,11 @@ export default function BurgerMenu() {
               Free Workshops
             </Link>
             <Link
-              href="#Blog"
+              href="/"
             >
               Blog
             </Link>
-            <Link onClick={() => setIsOpen(false)} href="#About">
+            <Link onClick={() => setIsOpen(false)} href="/">
               About
             </Link>
             <Link onClick={() => setIsOpen(false)} href="#Contact">

@@ -9,7 +9,7 @@ interface WorksProps {
   created_date: string;
 }
 
-const WorksShopSection: FC <WorksProps> = () => {
+const WorksShopSection: FC = () => {
   const [more, setMore] = useState(0);
   const [works, setWorks] = useState<WorksProps[]>([]);
 

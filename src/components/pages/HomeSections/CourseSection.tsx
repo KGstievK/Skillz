@@ -1,9 +1,9 @@
-import { useGetMeQuery } from "@/redux/api/auth";
-import scss from "./CourseSection.module.scss";
-import axios from "axios";
 import { FC, useEffect, useState } from "react";
+import axios from "axios";
+import Image from "next/image";
+import scss from "./CourseSection.module.scss";
 
-interface coursesProps {
+interface CourseProps {
   id: number;
   name: string;
   author: string;
@@ -15,19 +15,29 @@ interface coursesProps {
   updated_date: string;
 }
 
-const CourseSection: FC<coursesProps> = () => {
-  const [courses, setCourses] = useState<coursesProps[]>([]);
-  const [more, setMore] = useState(0)
+const CourseSection: FC = () => {
+  const [courses, setCourses] = useState<CourseProps[]>([]);
+  const [more, setMore] = useState<number | null>(null);
 
   const api = process.env.NEXT_PUBLIC_API_URL;
 
   const fetchCourses = async () => {
-    const { data } = await axios.get(`${api}/courses`);
-    setCourses(data);
+    try {
+      if (!api) {
+        console.error("API URL is not defined!");
+        return;
+      }
+      const { data } = await axios.get(`${api}/courses`);
+      setCourses(data);
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+    }
   };
+
   useEffect(() => {
     fetchCourses();
   }, []);
+
   return (
     <section className={scss.CourseSection} id="Courses">
       <div className="container">
@@ -40,25 +50,29 @@ const CourseSection: FC<coursesProps> = () => {
             vitae erat.
           </p>
           <button>View All Courses</button>
-          <div className="blok">
+          <div className={scss.blok}>
             {courses.map((item) => (
               <div className={scss.course} key={item.id}>
-                <img src={item.image} alt="Course" />
+                <Image
+                  src={item.image}
+                  alt="Course"
+                  width={300}
+                  height={200}
+                  className={scss.image}
+                />
                 <div className={scss.info}>
                   <p>{item.name}</p>
                   <p>{item.author}</p>
-                  <p>{item.price}</p>
-                  {more === item.id ? (
+                  <p>{item.price} $</p>
+                  {more === item.id && (
                     <>
-                      <p style={{
-                      display: more ? "" : 'block'
-                    }}>{item.description}</p>
-                    <p style={{
-                      display: more ? "" : 'block'
-                    }}>{item.city}</p>
-                      </>
-                  ) : null}
-                  <button onClick={() => setMore(item.id)}>Learn More</button>
+                      <p>{item.description}</p>
+                      <p>{item.city}</p>
+                    </>
+                  )}
+                  <button onClick={() => setMore(more === item.id ? null : item.id)}>
+                    {more === item.id ? "Show Less" : "Learn More"}
+                  </button>
                 </div>
               </div>
             ))}

@@ -14,58 +14,55 @@ const Footer = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.Logo}>
-            <Link href="#">
+            <Link href="/">
               <Image src={Logo} alt="Logo" />
             </Link>
           </div>
           <div className={scss.resurs}>
             <nav className={scss.link}>
               <h2>learning Platform</h2>
-              <Link href="#">Courses</Link>
+              <Link href="#Courses">Courses</Link>
 
-              <Link href="#">Free Workshops</Link>
+              <Link href="#Workshops">Free Workshops</Link>
 
-              <Link href="#">Blog</Link>
+              <Link href="/">Blog</Link>
 
-              <Link href="#">About</Link>
+              <Link href="/">About</Link>
 
-              <Link href="#">Contact</Link>
+              <Link href="#Contact">Contact</Link>
             </nav>
 
             <nav className={scss.Template}>
               <h2>Template</h2>
-              <Link href="#">Instructions</Link>
+              <Link href="/">Instructions</Link>
 
-              <Link href="#">Style Guide</Link>
+              <Link href="/">Style Guide</Link>
 
-              <Link href="#">Licenses</Link>
+              <Link href="/">Licenses</Link>
 
-              <Link href="#">Changelog</Link>
+              <Link href="/">Changelog</Link>
             </nav>
             <nav className={scss.icons}>
               <h2>Follow skillz</h2>
               <div className={scss.iconLink}>
-                <Link href="#">
+                <Link href="/">
                   <Image src={TikTok} alt="" />
                 </Link>
 
-                <Link href="#">
-                <Image src={Insta} alt="" />
+                <Link href="/">
+                  <Image src={Insta} alt="" />
                 </Link>
 
-                <Link href="#">
-                <Image src={Youtube} alt="" />
-
+                <Link href="/">
+                  <Image src={Youtube} alt="" />
                 </Link>
 
-                <Link href="#">
-                <Image src={Facebooke} alt="" />
-
+                <Link href="/">
+                  <Image src={Facebooke} alt="" />
                 </Link>
 
-                <Link href="#">
-                <Image src={Twitter} alt="" />
-
+                <Link href="/">
+                  <Image src={Twitter} alt="" />
                 </Link>
               </div>
             </nav>

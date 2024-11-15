@@ -11,7 +11,7 @@ interface ArticlProps {
   updated_date: string
 }
 
-const ArticleSection: FC <ArticlProps> = () => {
+const ArticleSection: FC = () => {
   const [courses, setCourses] = useState<ArticlProps[]>([]);
   const [more, setMore] = useState(0)
 
