@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import scss from "./WorksShopSection.module.scss";
 import axios from "axios";
-import { log } from "console";
 
 interface WorksProps {
   id: number;
