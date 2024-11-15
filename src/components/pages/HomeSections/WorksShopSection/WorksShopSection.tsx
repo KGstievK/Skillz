@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import scss from "./WorksShopSection.module.scss";
 import axios from "axios";
+import { log } from "console";
 
 interface WorksProps {
   id: number;
@@ -13,6 +14,8 @@ const WorksShopSection: FC = () => {
   const [more, setMore] = useState(0);
   const [works, setWorks] = useState<WorksProps[]>([]);
 
+  console.log(more);
+  
   const api = process.env.NEXT_PUBLIC_API_URL;
 
   const fetchCourses = async () => {

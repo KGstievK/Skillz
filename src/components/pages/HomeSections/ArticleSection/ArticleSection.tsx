@@ -13,7 +13,6 @@ interface ArticlProps {
 
 const ArticleSection: FC = () => {
   const [courses, setCourses] = useState<ArticlProps[]>([]);
-  const [more, setMore] = useState(0)
 
   const api = process.env.NEXT_PUBLIC_API_URL;
 
