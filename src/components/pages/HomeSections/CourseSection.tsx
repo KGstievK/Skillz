@@ -3,9 +3,20 @@ import axios from "axios";
 import Image from "next/image";
 import scss from "./CourseSection.module.scss";
 
+interface CourseProps {
+  id: number;
+  name: string;
+  author: string;
+  price: number;
+  image: string;
+  description: string;
+  city: string;
+  created_date: string;
+  updated_date: string;
+}
 
 const CourseSection: FC = () => {
-  const [courses, setCourses] = useState<AUTH.GetResponse[]>([]);
+  const [courses, setCourses] = useState<CourseProps[]>([]);
   const [more, setMore] = useState<number | null>(null);
 
   const api = process.env.NEXT_PUBLIC_API_URL;
