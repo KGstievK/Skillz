@@ -57,19 +57,19 @@ export default function BurgerMenu() {
           </div>
           <nav className={scss.menuNav}>
             <Link
-              className={pathname === "/Courses" ? scss.active : ""}
+              className={pathname === "/Courses" ? scss.active : "/"}
               href="#Courses"
             >
               Courses
             </Link>
             <Link
-              className={pathname === "/Workshops" ? scss.active : ""}
+              className={pathname === "/Workshops" ? scss.active : "/"}
               href="#Workshops"
             >
               Free Workshops
             </Link>
             <Link
-              className={pathname === "/blog" ? scss.active : ""}
+              className={pathname === "/blog" ? scss.active : "/"}
               href="#Blog"
             >
               Blog

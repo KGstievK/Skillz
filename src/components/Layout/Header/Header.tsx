@@ -14,7 +14,7 @@ const Header = () => {
         <div className={scss.content}>
           <div className={scss.Logo}>
             <Link href="/">
-              <img src={Logo} alt="Logo" />
+              <Image src={Logo} alt="Logo" />
             </Link>
           </div>
           <div className={scss.nav}>
