@@ -1,13 +1,14 @@
 'use client'
 import LayoutSite from '@/components/Layout/LayoutSide'
 import ReduxProvider from '@/providers/ReduxProvider'
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 
-interface LayoutProps {
-	children: ReactNode
+interface LayoutClientType {
+  children: React.ReactNode
 }
 
-const LayoutClient: FC<LayoutProps> = ({ children }) => {
+
+const LayoutClient: FC<LayoutClientType> = ({ children }) => {
 	return (
 			<ReduxProvider>
         <LayoutSite>{children}</LayoutSite>
