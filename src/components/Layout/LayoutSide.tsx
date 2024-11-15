@@ -1,11 +1,11 @@
 "use client"
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import scss from "./LayoutSide.module.scss";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
 interface LayoutSiteProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 const LayoutSite: FC<LayoutSiteProps> = ({ children }) => {
   return (
