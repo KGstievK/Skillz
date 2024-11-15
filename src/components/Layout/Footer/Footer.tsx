@@ -6,6 +6,7 @@ import Insta from "@/assets/icons/Instagram.svg";
 import Youtube from "@/assets/icons/Youtube.svg";
 import Facebooke from "@/assets/icons/Facebooke.svg";
 import Twitter from "@/assets/icons/Twitter.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,59 +14,59 @@ const Footer = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.Logo}>
-            <a href="/">
+            <Link to="/">
               <Image src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <div className={scss.resurs}>
             <nav className={scss.link}>
               <h2>learning Platform</h2>
-              <a href="">Courses</a>
+              <Link to="">Courses</Link>
 
-              <a href="">Free Workshops</a>
+              <Link to="">Free Workshops</Link>
 
-              <a href="">Blog</a>
+              <Link to="">Blog</Link>
 
-              <a href="">About</a>
+              <Link to="">About</Link>
 
-              <a href="">Contact</a>
+              <Link to="">Contact</Link>
             </nav>
 
             <nav className={scss.Template}>
               <h2>Template</h2>
-              <a href="">Instructions</a>
+              <Link to="">Instructions</Link>
 
-              <a href="">Style Guide</a>
+              <Link to="">Style Guide</Link>
 
-              <a href="">Licenses</a>
+              <Link to="">Licenses</Link>
 
-              <a href="">Changelog</a>
+              <Link to="">Changelog</Link>
             </nav>
             <nav className={scss.icons}>
               <h2>Follow skillz</h2>
               <div className={scss.iconLink}>
-                <a href="">
+                <Link to="">
                   <Image src={TikTok} alt="" />
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="">
                 <Image src={Insta} alt="" />
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="">
                 <Image src={Youtube} alt="" />
 
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="">
                 <Image src={Facebooke} alt="" />
 
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="">
                 <Image src={Twitter} alt="" />
 
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
