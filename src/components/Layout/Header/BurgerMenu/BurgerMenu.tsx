@@ -9,8 +9,7 @@ import scss from "./BurgerMenu.module.scss";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const pathname = usePathname();
+  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
