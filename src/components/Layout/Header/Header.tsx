@@ -3,6 +3,7 @@ import scss from "./Header.module.scss";
 import Logo from "@/assets/Logo.svg";
 import Cart from "@/assets/Cart.svg";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import Link from "next/link";
 const Header = () => {
   return (
     <header className={scss.Header}>
@@ -12,25 +13,25 @@ const Header = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.Logo}>
-            <a href="/">
-              <Image src={Logo} alt="Logo" />
-            </a>
+            <Link href="/">
+              <img src={Logo} alt="Logo" />
+            </Link>
           </div>
           <div className={scss.nav}>
-            <a href="#Courses">Courses</a>
+            <Link href="#Courses">Courses</Link>
 
-            <a href="#Workshops">Free Workshops</a>
+            <Link href="#Workshops">Free Workshops</Link>
 
-            <a href="#Blog">Blog</a>
+            <Link href="#Blog">Blog</Link>
 
-            <a href="#About">About</a>
+            <Link href="#About">About</Link>
 
-            <a href="#Contact">Contact</a>
+            <Link href="#Contact">Contact</Link>
           </div>
           <div className={scss.cart}>
-            <a  href="">
+            <Link  href="">
               <Image src={Cart} alt="Cart" />
-            </a>
+            </Link>
           </div>
           <div className={scss.burgerMenu}>
 						<BurgerMenu />
