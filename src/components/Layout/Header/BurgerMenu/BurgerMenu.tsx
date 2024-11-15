@@ -51,25 +51,22 @@ export default function BurgerMenu() {
       {isOpen && (
         <div className={scss.menuOverlay}>
           <div className={scss.cart}>
-            <a href="">
+            <Link href="/">
               <Image src={Cart} alt="Cart" />
-            </a>
+            </Link>
           </div>
           <nav className={scss.menuNav}>
             <Link
-              className={pathname === "/Courses" ? scss.active : "/"}
               href="#Courses"
             >
               Courses
             </Link>
             <Link
-              className={pathname === "/Workshops" ? scss.active : "/"}
               href="#Workshops"
             >
               Free Workshops
             </Link>
             <Link
-              className={pathname === "/blog" ? scss.active : "/"}
               href="#Blog"
             >
               Blog
