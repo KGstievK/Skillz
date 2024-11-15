@@ -2,7 +2,7 @@ import { api as index } from '..';
 
 const api = index.injectEndpoints({
 	endpoints: (build) => ({
-		getMe: build.query<AUTH.GetResponse, AUTH.GetRequest>({
+		getMe: build.query({
 			query: () => ({
 				url: '/courses',
 				method: 'GET'
